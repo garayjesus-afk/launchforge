@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- =========================================================
+    META / SEO
+  ========================================================== -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b0f19" />
+    <meta
+      name="description"
+      content="LaunchForge AI turns your raw idea into a structured, launch-ready online business in 7 days. Get a roadmap, positioning, pricing, landing copy and more."
+    />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="LaunchForge AI — From Idea to Launch-Ready in 7 Days"
+    />
+    <meta
+      property="og:description"
+      content="Turn your raw idea into a structured, launch-ready online business in 7 days. Roadmap, positioning, pricing, landing copy and more."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/og-image.png" />
+    <meta property="og:url" content="https://example.com" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>LaunchForge AI — From Idea to Launch-Ready in 7 Days</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<defs>
+<linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'>
+<stop offset='0%' stop-color='%237c5cff'/>
+<stop offset='100%' stop-color='%2333d6ff'/>
+</linearGradient>
+</defs>
+<circle cx='50' cy='50' r='40' stroke='url(%23g)' stroke-width='8' fill='none'/>
+<circle cx='50' cy='50' r='20' fill='url(%23g)'/>
+</svg>"
+    />
+
+    <!-- =========================================================
+    PRECONNECT / FONTS (system stack, no external deps)
+  ========================================================== -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- =========================================================
+    STRUCTURED DATA (Schema.org)
+  ========================================================== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "LaunchForge AI",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "LaunchForge AI turns your raw idea into a structured, launch-ready online business in 7 days.",
+        "offers": {
+          "@type": "Offer",
+          "price": "29",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- =========================================================
+    SKIP LINK (A11Y)
+  ========================================================== -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- =========================================================
+    TOP PROGRESS BAR
+  ========================================================== -->
+    <div class="progress" aria-hidden="true">
+      <div class="progress__bar" id="progressBar"></div>
+    </div>
+
+    <!-- =========================================================
+    HEADER / NAVBAR
+  ========================================================== -->
+    <header class="header" id="top">
+      <nav class="nav container" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="LaunchForge AI home">
+          <span class="brand__logo" aria-hidden="true">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient
+                  id="lfGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#7c5cff" />
+                  <stop offset="100%" stop-color="#33d6ff" />
+                </linearGradient>
+              </defs>
+
+              <!-- Outer ring -->
+              <circle
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="url(#lfGradient)"
+                stroke-width="6"
+                fill="none"
+                opacity="0.9"
+              />
+
+              <!-- Inner core -->
+              <circle
+                cx="50"
+                cy="50"
+                r="18"
+                fill="url(#lfGradient)"
+                opacity="0.95"
+              />
+
+              <!-- Energy pulse -->
+              <circle cx="50" cy="50" r="6" fill="#e7e9ee" />
+            </svg>
+          </span>
+          <span class="brand__name">
+            LaunchForge
+            <span style="font-size: 0.75em; font-weight: 500; color: #33d6ff"
+              >AI</span
+            >
+          </span>
+          >
+        </a>
+
+        <button
+          class="nav__toggle"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span class="sr-only">Open menu</span>
+          <span class="nav__burger" aria-hidden="true"></span>
+        </button>
+
+        <div class="nav__menu" id="navMenu">
+          <ul class="nav__links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+
+          <div class="nav__cta">
+            <button class="btn btn--ghost" data-open-modal="demoModal">
+              See demo
+            </button>
+            <a class="btn btn--primary" href="#waitlist">Join Beta</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- =========================================================
+    MAIN
+  ========================================================== -->
+    <main id="main">
+      <!-- =========================================================
+      HERO
+    ========================================================== -->
+      <section class="hero">
+        <div class="hero__bg" aria-hidden="true"></div>
+
+        <div class="container hero__grid">
+          <div class="hero__content reveal">
+            <div class="pill">
+              <span class="dot" aria-hidden="true"></span>
+              Built for founders. Validated with real-world frameworks.
+            </div>
+
+            <h1 class="hero__title">
+              Go from <span class="accent">idea</span> to a
+              <span class="gradient">sellable business plan</span>
+              in <span class="accent">7 days</span>—without guesswork.
+            </h1>
+
+            <p class="hero__subtitle">
+              LaunchForge AI gives you a clear niche, positioning, pricing
+              tiers, landing copy, and a day-by-day execution roadmap—built to
+              help you ship your first version fast.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--lg" href="#waitlist"
+                >Join the Beta (Free)</a
+              >
+              <button
+                class="btn btn--ghost btn--lg"
+                data-open-modal="demoModal"
+              >
+                Watch the demo
+              </button>
+            </div>
+
+            <div class="hero__trust">
+              <div class="trust__item">
+                <span class="trust__num" data-counter="7">0</span>
+                <span class="trust__label">days roadmap</span>
+              </div>
+              <div class="trust__item">
+                <span class="trust__num" data-counter="15">0</span>
+                <span class="trust__label">deliverables</span>
+              </div>
+              <div class="trust__item">
+                <span class="trust__num" data-counter="2">0</span>
+                <span class="trust__label">minutes to start</span>
+              </div>
+            </div>
+
+            <p class="hero__note">
+              No credit card required for Beta. Cancel anytime later.
+            </p>
+          </div>
+
+          <div class="hero__card reveal" style="transition-delay: 120ms">
+            <div class="card">
+              <div class="card__top">
+                <span class="badge">Founder Kit</span>
+                <span class="badge badge--soft">Instant export</span>
+              </div>
+
+              <div class="card__body">
+                <p class="card__label">Example output</p>
+                <h3 class="card__title">“AI roadmap for a micro-SaaS”</h3>
+
+                <ul class="card__list">
+                  <li>✅ Niche & ICP in 3 options</li>
+                  <li>✅ Value proposition + differentiators</li>
+                  <li>✅ Pricing strategy (tiers + rationale)</li>
+                  <li>✅ Landing copy (headline → CTA)</li>
+                  <li>✅ 7-day execution checklist</li>
+                </ul>
+              </div>
+
+              <div class="card__footer">
+                <button class="btn btn--secondary" data-open-modal="demoModal">
+                  Preview demo
+                </button>
+                <a class="btn btn--ghost" href="#pricing">See pricing</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container logos reveal" style="transition-delay: 180ms">
+          <p class="logos__label">Works great for:</p>
+          <div class="logos__row" aria-label="Use cases">
+            <span class="logo-chip">SaaS ideas</span>
+            <span class="logo-chip">Digital products</span>
+            <span class="logo-chip">Paid newsletters</span>
+            <span class="logo-chip">Freelance offers</span>
+            <span class="logo-chip">Creator businesses</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+      FEATURES
+    ========================================================== -->
+      <section class="section" id="features">
+        <div class="container">
+          <header class="section__header reveal">
+            <h2>Everything you need to go from idea → execution</h2>
+            <p>
+              Not a generic chatbot. LaunchForge AI is a guided system designed
+              to ship real outcomes.
+            </p>
+          </header>
+
+          <div class="grid grid--3">
+            <article class="feature reveal">
+              <div class="feature__icon" aria-hidden="true">🎯</div>
+              <h3>Positioning that sells</h3>
+              <p>
+                Define niche, ICP, pain points, and differentiators to stand out
+                instantly.
+              </p>
+            </article>
+
+            <article class="feature reveal" style="transition-delay: 80ms">
+              <div class="feature__icon" aria-hidden="true">💵</div>
+              <h3>Pricing you can defend</h3>
+              <p>
+                Tiered pricing suggestions with logic, packaging, and early
+                adopter strategy.
+              </p>
+            </article>
+
+            <article class="feature reveal" style="transition-delay: 160ms">
+              <div class="feature__icon" aria-hidden="true">🧩</div>
+              <h3>Launch blueprint</h3>
+              <p>
+                A 7-day plan with daily tasks, assets, and checkpoints—so you
+                actually ship.
+              </p>
+            </article>
+
+            <article class="feature reveal">
+              <div class="feature__icon" aria-hidden="true">📝</div>
+              <h3>Landing copy, ready</h3>
+              <p>
+                Headline, subhead, benefits, objections, FAQ, and CTAs tailored
+                to your idea.
+              </p>
+            </article>
+
+            <article class="feature reveal" style="transition-delay: 80ms">
+              <div class="feature__icon" aria-hidden="true">⚙️</div>
+              <h3>Execution checklists</h3>
+              <p>
+                Step-by-step checklists that reduce overwhelm and keep momentum.
+              </p>
+            </article>
+
+            <article class="feature reveal" style="transition-delay: 160ms">
+              <div class="feature__icon" aria-hidden="true">📦</div>
+              <h3>Export & share</h3>
+              <p>
+                Export as a clean document, share with partners, or paste
+                directly into tools.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+      HOW IT WORKS
+    ========================================================== -->
+      <section class="section section--alt" id="how">
+        <div class="container">
+          <header class="section__header reveal">
+            <h2>How it works</h2>
+            <p>Three steps. No fluff. Real deliverables you can use today.</p>
+          </header>
+
+          <div class="steps">
+            <div class="step reveal">
+              <div class="step__num">1</div>
+              <div class="step__content">
+                <h3>Answer smart prompts</h3>
+                <p>
+                  We ask the right questions so the output is precise, not
+                  generic.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal" style="transition-delay: 80ms">
+              <div class="step__num">2</div>
+              <div class="step__content">
+                <h3>Get a structured launch plan</h3>
+                <p>
+                  Positioning, pricing, roadmap, landing copy, and
+                  checklists—generated as a system.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal" style="transition-delay: 160ms">
+              <div class="step__num">3</div>
+              <div class="step__content">
+                <h3>Ship in 7 days</h3>
+                <p>
+                  Follow the plan, execute daily tasks, and launch your first
+                  version fast.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo reveal">
+            <div class="demo__left">
+              <h3>Want to see a sample output?</h3>
+              <p>
+                Open the demo and explore how a messy idea becomes a clean,
+                launch-ready blueprint.
+              </p>
+              <div class="demo__actions">
+                <button class="btn btn--primary" data-open-modal="demoModal">
+                  Open demo
+                </button>
+                <a class="btn btn--ghost" href="#waitlist">Join Beta</a>
+              </div>
+            </div>
+
+            <div class="demo__right">
+              <div class="codecard" aria-label="Example snippet">
+                <div class="codecard__top">
+                  <span class="codecard__dot"></span>
+                  <span class="codecard__dot"></span>
+                  <span class="codecard__dot"></span>
+                  <span class="codecard__title">Launch plan (Day 1–2)</span>
+                </div>
+                <pre class="codecard__pre"><code>
+Day 1: Pick a tight niche → validate pain → define ICP
+Day 2: Craft value prop → differentiate → draft landing narrative
+Output: 1-page offer + pricing tiers + CTA + objections
+              </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+      PRICING
+    ========================================================== -->
+      <section class="section" id="pricing">
+        <div class="container">
+          <header class="section__header reveal">
+            <h2>Simple pricing</h2>
+            <p>Start free. Upgrade when you’re ready to ship faster.</p>
+          </header>
+
+          <div
+            class="pricing-toggle reveal"
+            role="group"
+            aria-label="Billing period toggle"
+          >
+            <span class="pricing-toggle__label" id="labelMonthly">Monthly</span>
+            <button
+              class="toggle"
+              id="billingToggle"
+              aria-pressed="false"
+              aria-labelledby="labelMonthly labelYearly"
+            >
+              <span class="toggle__knob" aria-hidden="true"></span>
+            </button>
+            <span class="pricing-toggle__label" id="labelYearly"
+              >Yearly <span class="chip">Save 20%</span></span
+            >
+          </div>
+
+          <div class="grid grid--3 pricing">
+            <article class="price-card reveal">
+              <h3>Free Beta</h3>
+              <p class="muted">For trying it out</p>
+              <p class="price">
+                <span class="price__amount">$0</span>
+                <span class="price__period">/mo</span>
+              </p>
+              <ul class="list">
+                <li>1 blueprint generation</li>
+                <li>Basic roadmap</li>
+                <li>Email support</li>
+              </ul>
+              <a class="btn btn--ghost w-100" href="#waitlist">Join Beta</a>
+            </article>
+
+            <article
+              class="price-card price-card--featured reveal"
+              style="transition-delay: 90ms"
+            >
+              <div class="ribbon">Most popular</div>
+              <h3>Pro</h3>
+              <p class="muted">For shipping fast</p>
+              <p class="price">
+                <span
+                  class="price__amount"
+                  data-price-month="29"
+                  data-price-year="23"
+                  >$29</span
+                >
+                <span class="price__period" data-period>/mo</span>
+              </p>
+              <ul class="list">
+                <li>Unlimited blueprints</li>
+                <li>Landing copy generator</li>
+                <li>Pricing tiers + rationale</li>
+                <li>Export to PDF (coming soon)</li>
+              </ul>
+              <button
+                class="btn btn--primary w-100"
+                data-open-modal="founderModal"
+              >
+                Get Pro (Founder offer)
+              </button>
+              <p class="small muted center">
+                Founder pricing: lock it in now (interest only).
+              </p>
+            </article>
+
+            <article class="price-card reveal" style="transition-delay: 180ms">
+              <h3>Founder</h3>
+              <p class="muted">For serious builders</p>
+              <p class="price">
+                <span
+                  class="price__amount"
+                  data-price-month="79"
+                  data-price-year="63"
+                  >$79</span
+                >
+                <span class="price__period" data-period>/mo</span>
+              </p>
+              <ul class="list">
+                <li>Everything in Pro</li>
+                <li>Advanced strategy outputs</li>
+                <li>Priority support</li>
+                <li>Early features access</li>
+              </ul>
+              <button
+                class="btn btn--secondary w-100"
+                data-open-modal="founderModal"
+              >
+                Join Founder
+              </button>
+              <p class="small muted center">
+                Limited founder spots (early access + perks).
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+      TESTIMONIALS
+    ========================================================== -->
+      <section class="section section--alt">
+        <div class="container">
+          <header class="section__header reveal">
+            <h2>What builders want (and what we deliver)</h2>
+            <p>
+              Early beta-style testimonials (placeholder copy). Replace with
+              real users soon.
+            </p>
+          </header>
+
+          <div class="grid grid--3">
+            <figure class="quote reveal">
+              <blockquote>
+                “This turned my messy concept into a clean offer I could
+                actually sell.”
+              </blockquote>
+              <figcaption>— Alex, indie founder</figcaption>
+            </figure>
+
+            <figure class="quote reveal" style="transition-delay: 80ms">
+              <blockquote>
+                “The roadmap is the difference. I stopped overthinking and
+                shipped.”
+              </blockquote>
+              <figcaption>— Sam, creator</figcaption>
+            </figure>
+
+            <figure class="quote reveal" style="transition-delay: 160ms">
+              <blockquote>
+                “It’s like having a product strategist on demand.”
+              </blockquote>
+              <figcaption>— Jordan, freelancer</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+      WAITLIST
+    ========================================================== -->
+      <section class="section" id="waitlist">
+        <div class="container">
+          <div class="cta reveal">
+            <div class="cta__text">
+              <h2>Join the Beta</h2>
+              <p>
+                Get early access, founder perks, and help shape the product. No
+                spam.
+              </p>
+              <ul class="list list--inline">
+                <li>✅ Early access</li>
+                <li>✅ Founder pricing</li>
+                <li>✅ Priority features</li>
+              </ul>
+            </div>
+
+            <form class="form" id="waitlistForm" novalidate>
+              <label class="label" for="email">Email</label>
+              <div class="field">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@domain.com"
+                  required
+                />
+                <button class="btn btn--primary" type="submit">Join</button>
+              </div>
+              <p class="help" id="formHelp">
+                By joining, you agree to our <a href="terms.html">Terms</a> and
+                <a href="privacy.html">Privacy Policy</a>.
+              </p>
+              <p
+                class="help help--error"
+                id="formError"
+                role="alert"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+      FAQ
+    ========================================================== -->
+      <section class="section section--alt" id="faq">
+        <div class="container">
+          <header class="section__header reveal">
+            <h2>FAQ</h2>
+            <p>Quick answers to common questions.</p>
+          </header>
+
+          <div class="accordion" id="faqAccordion">
+            <details class="acc reveal">
+              <summary>Is this just another chatbot?</summary>
+              <div class="acc__content">
+                No. LaunchForge AI is a guided system with structured outputs:
+                positioning, pricing, landing narrative, and a 7-day execution
+                plan.
+              </div>
+            </details>
+
+            <details class="acc reveal" style="transition-delay: 60ms">
+              <summary>Do I need a business idea already?</summary>
+              <div class="acc__content">
+                A rough idea is enough. Even “I want to build something for
+                creators” works—our prompts help you narrow it down.
+              </div>
+            </details>
+
+            <details class="acc reveal" style="transition-delay: 120ms">
+              <summary>Will this actually help me launch faster?</summary>
+              <div class="acc__content">
+                Yes—because you don’t start from a blank page. You get a
+                structured blueprint and a daily plan so you can execute, not
+                just think.
+              </div>
+            </details>
+
+            <details class="acc reveal" style="transition-delay: 180ms">
+              <summary>What do I get in the Beta?</summary>
+              <div class="acc__content">
+                Early access, founder perks, and priority on feature requests.
+                You’ll also help shape the exact outputs we ship for the public
+                launch.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================
+    FOOTER
+  ========================================================== -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a
+            class="brand brand--footer"
+            href="#top"
+            aria-label="LaunchForge AI home"
+          >
+            <span class="brand__logo" aria-hidden="true">⚡</span>
+            <span class="brand__name"
+              >LaunchForge<span class="accent">AI</span></span
+            >
+          </a>
+          <p class="muted">From idea to launch-ready in 7 days.</p>
+          <p class="small muted">
+            © <span id="year"></span> LaunchForge AI. All rights reserved.
+          </p>
+        </div>
+
+        <div class="footer__links">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#waitlist">Join Beta</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+
+        <div class="footer__social">
+          <button class="btn btn--ghost btn--sm" data-open-modal="demoModal">
+            Demo
+          </button>
+          <button class="btn btn--ghost btn--sm" id="copyLinkBtn">
+            Copy link
+          </button>
+          <button
+            class="btn btn--ghost btn--sm admin-only"
+            id="downloadLeadsBtn"
+            type="button"
+          >
+            Download leads
+          </button>
+          <button
+            class="btn btn--ghost btn--sm admin-only"
+            id="downloadEventsBtn"
+            type="button"
+          >
+            Download events
+          </button>
+          <button
+            class="btn btn--ghost btn--sm admin-only"
+            id="clearEventsBtn"
+            type="button"
+          >
+            Clear events
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================================================
+    MODAL: DEMO
+  ========================================================== -->
+    <div
+      class="modal"
+      id="demoModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="demoTitle"
+      aria-hidden="true"
+    >
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__panel" role="document">
+        <div class="modal__header">
+          <h3 id="demoTitle">Demo: Sample Blueprint</h3>
+          <button class="iconbtn" data-close-modal aria-label="Close demo">
+            ✕
+          </button>
+        </div>
+
+        <div class="modal__body">
+          <p class="muted">
+            This is a static demo UI for validation. Later, you’ll plug an API.
+          </p>
+
+          <div class="demo-ui">
+            <div class="demo-ui__left">
+              <label class="label" for="ideaInput">Your idea</label>
+              <textarea
+                id="ideaInput"
+                rows="4"
+                placeholder="Example: A tool to help busy parents meal prep..."
+              ></textarea>
+
+              <label class="label" for="audienceInput">Target audience</label>
+              <input
+                id="audienceInput"
+                type="text"
+                placeholder="Example: Busy parents in the US"
+              />
+
+              <button class="btn btn--primary w-100" id="generateBtn">
+                Generate blueprint
+              </button>
+              <p class="small muted center">
+                Runs locally (mock). No API calls yet.
+              </p>
+            </div>
+
+            <div class="demo-ui__right">
+              <div class="output" id="outputBox" aria-live="polite">
+                <p class="muted">
+                  Click “Generate blueprint” to see a sample output.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal__footer">
+          <a class="btn btn--ghost" href="#waitlist" data-close-modal
+            >Join Beta</a
+          >
+          <button class="btn btn--secondary" data-close-modal>Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+    MODAL: FOUNDER OFFER (Capture interest)
+  ========================================================== -->
+    <div
+      class="modal"
+      id="founderModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="founderTitle"
+      aria-hidden="true"
+    >
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__panel" role="document">
+        <div class="modal__header">
+          <h3 id="founderTitle">Founder Offer (Interest)</h3>
+          <button class="iconbtn" data-close-modal aria-label="Close">✕</button>
+        </div>
+
+        <div class="modal__body">
+          <p class="muted">
+            Want founder pricing when we open payments? Drop your email and
+            we’ll invite you first. Founder spots are limited during beta.
+          </p>
+
+          <form id="founderForm" class="form" novalidate>
+            <label class="label" for="founderEmail">Email</label>
+            <div class="field">
+              <input
+                id="founderEmail"
+                name="email"
+                type="email"
+                placeholder="you@domain.com"
+                required
+              />
+              <button class="btn btn--primary" type="submit">Request</button>
+            </div>
+            <p
+              class="help help--error"
+              id="founderError"
+              role="alert"
+              aria-live="polite"
+            ></p>
+          </form>
+        </div>
+
+        <div class="modal__footer">
+          <button class="btn btn--secondary" data-close-modal>Done</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+    COOKIE BANNER
+  ========================================================== -->
+    <div
+      class="cookie"
+      id="cookieBanner"
+      role="dialog"
+      aria-live="polite"
+      aria-label="Cookie notice"
+    >
+      <p class="cookie__text">
+        We use cookies to improve the experience. You can accept or decline.
+        <a href="privacy.html">Learn more</a>.
+      </p>
+      <div class="cookie__actions">
+        <button class="btn btn--ghost btn--sm" id="cookieDecline">
+          Decline
+        </button>
+        <button class="btn btn--primary btn--sm" id="cookieAccept">
+          Accept
+        </button>
+      </div>
+    </div>
+
+    <!-- =========================================================
+    TOAST CONTAINER
+  ========================================================== -->
+    <div class="toasts" id="toasts" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

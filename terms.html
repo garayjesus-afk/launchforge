@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0f19" />
+  <title>Terms of Service — LaunchForge AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand__logo" aria-hidden="true">⚡</span>
+        <span class="brand__name">LaunchForge<span class="accent">AI</span></span>
+      </a>
+      <a class="btn btn--ghost" href="index.html#waitlist">Back</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <header class="section__header">
+        <h2>Terms of Service</h2>
+        <p class="muted">Template page. Replace with your final legal text before enabling payments.</p>
+      </header>
+
+      <div class="card">
+        <p><strong>Beta disclaimer:</strong> Outputs are informational and not legal/financial advice.</p>
+        <p><strong>Accounts & access:</strong> In beta, access may be limited or changed.</p>
+        <p><strong>Refunds:</strong> If payments are enabled later, refunds will follow the posted policy.</p>
+        <p><strong>Acceptable use:</strong> No abuse, scraping, or illegal use.</p>
+        <p class="muted small">Last updated: <span id="tYear"></span></p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("tYear").textContent = new Date().toISOString().slice(0,10);
+  </script>
+</body>
+</html>

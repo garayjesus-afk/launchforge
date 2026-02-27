@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0f19" />
+  <title>Privacy Policy — LaunchForge AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand__logo" aria-hidden="true">⚡</span>
+        <span class="brand__name">LaunchForge<span class="accent">AI</span></span>
+      </a>
+      <a class="btn btn--ghost" href="index.html#waitlist">Back</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <header class="section__header">
+        <h2>Privacy Policy</h2>
+        <p class="muted">Template page. Replace with your final legal text before launching paid traffic.</p>
+      </header>
+
+      <div class="card">
+        <p><strong>What we collect:</strong> Email (for waitlist/founder interest), and basic usage info if enabled later.</p>
+        <p><strong>How we use it:</strong> To contact you about beta access, updates, and offers.</p>
+        <p><strong>Cookies:</strong> We may store cookie preferences locally in your browser.</p>
+        <p><strong>Data deletion:</strong> Contact us to delete your data.</p>
+        <p class="muted small">Last updated: <span id="pYear"></span></p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("pYear").textContent = new Date().toISOString().slice(0,10);
+  </script>
+</body>
+</html>
