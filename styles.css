@@ -1276,3 +1276,135 @@ textarea:focus {
 .codecard__dot:nth-child(3) {
   background: #ff453a; /* rojo */
 }
+/* =========================================
+   TYPEWRITER CURSOR (Terminal)
+========================================= */
+
+/* Cursor al final del texto del codecard */
+#launchPlanTyped::after {
+  content: "▍";
+  display: inline-block;
+  margin-left: 2px;
+  color: rgba(120, 195, 255, 0.95);
+  animation: terminalBlink 1s steps(1) infinite;
+}
+
+@keyframes terminalBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Accesibilidad: si el usuario reduce animaciones, quitamos parpadeo */
+@media (prefers-reduced-motion: reduce) {
+  #launchPlanTyped::after {
+    animation: none;
+  }
+}
+/* =========================================
+   PRO (featured) card: Electric blue sparks border
+   Target: .price-card--featured
+========================================= */
+
+.price-card--featured {
+  position: relative;
+  isolation: isolate; /* asegura que los pseudo-elementos no se mezclen raro */
+  border: 1px solid rgba(90, 170, 255, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(90, 170, 255, 0.12) inset,
+    0 12px 40px rgba(0, 0, 0, 0.45),
+    0 0 28px rgba(60, 140, 255, 0.18);
+  overflow: hidden;
+}
+
+/* Borde animado con gradiente que “corre” */
+.price-card--featured::before {
+  content: "";
+  position: absolute;
+  inset: -2px; /* sobresale un poquito */
+  border-radius: inherit;
+  padding: 2px; /* grosor del borde glow */
+  background: conic-gradient(
+    from 0deg,
+    transparent 0 10%,
+    rgba(90, 170, 255, 0.85) 12%,
+    rgba(0, 210, 255, 0.95) 18%,
+    transparent 22% 35%,
+    rgba(90, 170, 255, 0.7) 38%,
+    rgba(0, 160, 255, 0.95) 45%,
+    transparent 55% 100%
+  );
+  animation: proBorderSpin 3.2s linear infinite;
+  filter: blur(6px);
+  z-index: -2;
+
+  /* truco para que solo se vea como borde */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Chispas: puntitos que aparecen en el borde */
+.price-card--featured::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+  pointer-events: none;
+
+  /* puntitos tipo sparks */
+  background:
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(120, 210, 255, 0.9) 0 1.6px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 88% 22%,
+      rgba(90, 170, 255, 0.85) 0 1.4px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 74% 86%,
+      rgba(0, 200, 255, 0.95) 0 1.8px,
+      transparent 2.2px
+    ),
+    radial-gradient(
+      circle at 22% 78%,
+      rgba(120, 210, 255, 0.8) 0 1.2px,
+      transparent 2px
+    );
+
+  opacity: 0.55;
+  animation: proSparksFlicker 1.15s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(80, 160, 255, 0.35));
+}
+
+@keyframes proBorderSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes proSparksFlicker {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-1px);
+  }
+}
+
+/* Accesibilidad: si reduce motion, quitamos animación */
+@media (prefers-reduced-motion: reduce) {
+  .price-card--featured::before,
+  .price-card--featured::after {
+    animation: none;
+  }
+}
