@@ -743,4 +743,47 @@
     storage.set("events", []);
     toast("Events cleared", "Tracking storage is now empty.");
   });
+  /* =========================================
+   TYPEWRITER: Launch plan (codecard)
+========================================= */
+  (function () {
+    const el = document.getElementById("launchPlanTyped");
+    if (!el) return;
+
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const fullText = el.getAttribute("data-text") || "";
+
+    // Si el usuario prefiere menos animaciones, muestra todo de golpe
+    if (prefersReduced) {
+      el.textContent = fullText;
+      return;
+    }
+
+    // Limpia y escribe poco a poco
+    el.textContent = "";
+    let i = 0;
+
+    const SPEED = 35; // velocidad normal (más alto = más lento)
+
+    function extraDelay(ch) {
+      if (ch === "\n") return 200;
+      if (ch === "." || ch === "!" || ch === "?") return 140;
+      if (ch === ":") return 120;
+      if (ch === ",") return 80;
+      return 0;
+    }
+
+    function type() {
+      if (i >= fullText.length) return;
+      const ch = fullText[i];
+      el.textContent += ch;
+      i++;
+      setTimeout(type, SPEED + extraDelay(ch));
+    }
+
+    // Empieza cuando cargue la página
+    window.addEventListener("load", type);
+  })();
 })();
