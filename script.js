@@ -483,6 +483,7 @@
 
       formError.textContent = "";
       saveLead("waitlist", email);
+      adsRegistroConversion();
       trackEvent("submit_waitlist", { emailDomain: email.split("@")[1] || "" });
       waitlistForm.reset();
 
@@ -509,6 +510,7 @@
 
       founderError.textContent = "";
       saveLead("founder_offer", email);
+      adsRegistroConversion();
       founderForm.reset();
 
       toast(
@@ -786,4 +788,23 @@
     // Empieza cuando cargue la página
     window.addEventListener("load", type);
   })();
+  /* =========================================
+   GOOGLE ADS CONVERSION: REGISTRO (Lead)
+========================================= */
+  const ADS_REG_SEND_TO = "AW-17981387176/tCGaCL7Jg4AcEKjjmP5C";
+
+  function adsRegistroConversion() {
+    if (typeof window.gtag !== "function") return;
+
+    // Evita contar 10 conversiones si el mismo usuario manda 10 veces en la misma sesión
+    const key = "lf_ads_reg_sent";
+    if (sessionStorage.getItem(key) === "1") return;
+    sessionStorage.setItem(key, "1");
+
+    window.gtag("event", "conversion", {
+      send_to: ADS_REG_SEND_TO,
+      value: 1.0,
+      currency: "USD",
+    });
+  }
 })();
